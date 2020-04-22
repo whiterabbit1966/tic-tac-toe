@@ -133,6 +133,10 @@ class App extends Component {
 
                 <h1 className="title">Tic Tac Toe</h1>
 
+                <button className="reset" onClick={() => this.reset()}>
+                    Reset
+                </button>
+
                 <Status
                     player={this.state.player}
                     setPlayer={(e) => {
@@ -143,9 +147,6 @@ class App extends Component {
 
                 <div className="board">{this.renderBoxes()}</div>
 
-                <button className="reset" onClick={() => this.reset()}>
-                    Reset
-                </button>
                 <div className="instruction">
                     <h2 className="instruction__title">
                         Never played? You need here

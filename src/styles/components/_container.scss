@@ -8,6 +8,7 @@
     h1 {
         margin: 5vh 0 15vh;
         transform: translateX(-100%);
+        font-size: 40px;
     }
 }
 
@@ -142,6 +143,17 @@
     }
 }
 
+.player-is {
+    padding: 40px 0;
+}
+
+.board {
+    display: inline-flex;
+    flex-wrap: wrap;
+    transform: translateY(300%);
+    width: 246px;
+}
+
 .box {
     display: inline-block;
     width: 80px;
@@ -152,20 +164,8 @@
     border: 1px solid #000;
 }
 
-.board {
-    display: inline-flex;
-    flex-wrap: wrap;
-    transform: translateY(300%);
-    width: 246px;
-}
-
 .reset {
     display: none;
-    position: absolute;
-    top: 230px;
-    right: 0;
-    left: 0;
-    z-index: 0;
     margin: 0 auto;
     width: 140px;
     height: 60px;
