@@ -1,0 +1,28 @@
+.instruction {
+    padding: 150px 0;
+}
+
+.instruction__title {
+    padding-bottom: 80px;
+    transform: translateX(100%);
+    .font-awesome-icon {
+        padding-left: 30px;
+        font-size: 30px;
+        animation-name: arrow;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        @keyframes arrow {
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+.instruction__img {
+    transform: translateX(-200%);
+}

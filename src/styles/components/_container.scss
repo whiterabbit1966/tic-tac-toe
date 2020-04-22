@@ -1,0 +1,183 @@
+.container {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    transition: all 0.4s linear;
+
+    h1 {
+        margin: 5vh 0 15vh;
+        transform: translateX(-100%);
+    }
+}
+
+.container--moving {
+    animation: containerMoving;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    @keyframes containerMoving {
+        100% {
+            transform: translateY(0%);
+        }
+    }
+}
+
+.container--change-theme {
+    color: #fff;
+    background: #000;
+
+    .change-theme {
+        color: #fff;
+        background: #000;
+        border: 2px solid #fff;
+
+        &:hover {
+            color: #000;
+            background: #fff;
+        }
+    }
+
+    .box {
+        border: 1px solid #fff;
+    }
+
+    .form-choose-player {
+        .label {
+            border: 2px solid #fff;
+            &:hover {
+                color: #000;
+                background: #fff;
+                transition: all 0.2s linear;
+                .checkmark:after {
+                    color: #000;
+                }
+            }
+        }
+
+        input[type="submit"] {
+            color: #fff;
+            background: #000;
+            border: 2px solid #fff;
+
+            &:hover {
+                color: #000;
+                background: #fff;
+            }
+        }
+    }
+    .reset {
+        color: #fff;
+        background: #000;
+        border: 2px solid #fff;
+
+        &:hover {
+            color: #000;
+            background: #fff;
+        }
+    }
+}
+
+.change-theme {
+    transform: translateX(800%);
+    width: 250px;
+    height: 60px;
+    margin: 40px auto 0;
+    font-family: "Junegull Regular", sans-serif;
+    font-size: 30px;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:hover {
+        background: #000;
+        color: #fff;
+    }
+}
+
+.ball {
+    display: none;
+}
+
+.ball-white {
+    display: block;
+    position: absolute;
+    top: 40vh;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #fff;
+    animation: ball;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.ball-moving {
+    display: block;
+    position: absolute;
+    top: 40vh;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #000;
+    animation: ball;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    @keyframes ball {
+        100% {
+            display: none;
+            transform: scale(13, 13);
+            opacity: 0.1;
+        }
+    }
+}
+
+.box {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 70px;
+    font-weight: 700;
+    border: 1px solid #000;
+}
+
+.board {
+    display: inline-flex;
+    flex-wrap: wrap;
+    transform: translateY(300%);
+    width: 246px;
+}
+
+.reset {
+    display: none;
+    position: absolute;
+    top: 230px;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    margin: 0 auto;
+    width: 140px;
+    height: 60px;
+    font-family: "Junegull Regular", sans-serif;
+    font-size: 30px;
+    color: #000;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:hover {
+        background: #000;
+        color: #fff;
+    }
+}

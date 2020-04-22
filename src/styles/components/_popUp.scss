@@ -1,0 +1,21 @@
+.pop-up--moving {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    animation: popUp;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    @keyframes popUp {
+        100% {
+            top: 200px;
+        }
+    }
+}

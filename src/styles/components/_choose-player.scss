@@ -1,0 +1,61 @@
+/*==========================================
+ChoosePlayer
+==========================================*/
+.form-choose-player {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    width: 500px;
+    margin: 0 auto;
+    transform: translateY(-300%);
+    .label {
+        position: relative;
+        padding: 20px 30px;
+        margin: 0 20px;
+        border: 2px solid #000;
+        cursor: pointer;
+        &:hover {
+            color: #fff;
+            background: #000;
+            transition: all 0.2s linear;
+        }
+    }
+    input[type="submit"] {
+        width: 140px;
+        height: 60px;
+        margin: 40px auto 0;
+        font-family: "Junegull Regular", sans-serif;
+        font-size: 30px;
+        border: 2px solid #000;
+        cursor: pointer;
+        transition: all 0.2s linear;
+
+        &:hover {
+            background: #000;
+            color: #fff;
+        }
+    }
+
+    h2 {
+        padding-bottom: 20px;
+    }
+}
+
+.radio {
+    opacity: 0;
+}
+
+.checkmark:after {
+    content: "\2714";
+    position: absolute;
+    display: none;
+    top: 2px;
+    right: 10px;
+    font-size: 35px;
+    background: transparent;
+    border-radius: 50%;
+}
+
+input:checked + .checkmark:after {
+    display: block;
+}
