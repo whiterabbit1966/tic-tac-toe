@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
 
 import Status from "./components/Status";
-import Player from "./components/ChoosePlayer";
 
 import "./styles/index.scss";
 
@@ -62,6 +61,7 @@ class App extends Component {
                 this.setState({
                     winner: this.state.player,
                 });
+                location.reload();
             }
         }
     }
@@ -95,11 +95,12 @@ class App extends Component {
     reset() {
         let reset = document.querySelector(".reset");
         reset.style.display = "none";
-        this.setState({
-            player: null,
-            winner: null,
-            board: Array(9).fill(null),
-        });
+        location.reload();
+        // this.setState({
+        //     player: null,
+        //     winner: null,
+        //     board: Array(9).fill(null),
+        // });
     }
 
     changeTheme() {
@@ -150,7 +151,10 @@ class App extends Component {
                 <div className="instruction">
                     <h2 className="instruction__title">
                         Never played? You need here
-                        <FontAwesomeIcon className="font-awesome-icon" icon={faArrowCircleDown} />
+                        <FontAwesomeIcon
+                            className="font-awesome-icon"
+                            icon={faArrowCircleDown}
+                        />
                     </h2>
                     <img className="instruction__img" src="img/instruction.jpg" />
                 </div>

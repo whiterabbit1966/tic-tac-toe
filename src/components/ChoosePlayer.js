@@ -9,17 +9,30 @@ class Player extends Component {
     }
     render() {
         return (
-            <form className="form-choose-player" onSubmit={(e) => this.handleForm(e)}>
+            <form
+                className="form-choose-player"
+                onSubmit={(e) => this.handleForm(e)}
+            >
                 <div className="players">
                     <h2>Choose player</h2>
                     <label className="label">
                         <span>Player X</span>
-                        <input className="radio" type="radio" name="player" value="X" />
+                        <input
+                            className="radio"
+                            type="radio"
+                            name="player"
+                            value="X"
+                        />
                         <span className="checkmark" />
                     </label>
                     <label className="label">
                         <span>Player O</span>
-                        <input className="radio" type="radio" name="player" value="O" />
+                        <input
+                            className="radio"
+                            type="radio"
+                            name="player"
+                            value="O"
+                        />
                         <span className="checkmark" />
                     </label>
                 </div>
